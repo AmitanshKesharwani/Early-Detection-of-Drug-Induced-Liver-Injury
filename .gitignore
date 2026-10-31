@@ -1,0 +1,25 @@
+# Virtual environment
+.venv/
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data: ignore everything in data/ except directories, README files, and .gitkeep
+data/**/*
+!data/**/
+!data/**/.gitkeep
+!data/**/README*
+!data/**/readme*
+
