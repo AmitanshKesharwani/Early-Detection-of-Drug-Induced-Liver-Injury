@@ -1,0 +1,20 @@
+=== Python & Environment Check ===
+Python Version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+
+=== Installed Package Versions ===
+pandas: 3.1.0
+numpy: 2.5.4
+scikit-learn: 1.9.1
+rdkit: 2026.9.1
+lightgbm: 4.7.0
+shap: 0.54.1
+requests: 2.34.2
+matplotlib: 3.11.2
+pytest: 9.2.0
+jupyter: 1.1.1
+
+=== RDKit Aspirin Smoke Test ===
+Aspirin SMILES: CC(=O)Oc1ccccc1C(=O)O
+Morgan fingerprint bits on: 24 (out of 2048)
+Molecular weight: 180.1590
+LogP: 1.3101
