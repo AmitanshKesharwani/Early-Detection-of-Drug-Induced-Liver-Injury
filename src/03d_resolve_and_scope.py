@@ -180,8 +180,8 @@ def main():
         "Sodium bicarbonate", "Lanthanum carbonate"
     }
 
-    # 3. Mixture with no single structure (Verteporfin, Estrogens, conjugated, Perflutren)
-    mixture_names = {"Verteporfin", "Estrogens, conjugated", "Perflutren"}
+    # 3. Mixture with no single structure (Verteporfin, Estrogens, conjugated, Perflutren, Tetrabamate)
+    mixture_names = {"Verteporfin", "Estrogens, conjugated", "Perflutren", "Tetrabamate"}
 
     # 4. Macromolecules, biologics, polymers
     macro_explicit = {
@@ -222,6 +222,8 @@ def main():
                 custom_notes.append("mixture; PubChem returned a single component")
             elif name == "Perflutren":
                 custom_notes.append("microsphere formulation; C3F8 is not the drug as administered")
+            elif name == "Tetrabamate":
+                custom_notes.append("mixture of phenobarbital, febarbamate and difebarbamate")
 
         # 4. macromolecule_biologic_polymer
         if name in macro_names:

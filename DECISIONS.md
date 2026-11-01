@@ -22,3 +22,11 @@
   - Dextromethorphan polistirex: mapped by alias to its active moiety dextromethorphan (CID 5360696, formula C18H25NO).
   - Diagnostic dyes and contrast agents (16 drugs) are retained in the dataset but flagged with diagnostic_agent = True for a sensitivity analysis.
   - Step 5 rules: parent extraction uses the largest organic fragment; any drug whose two largest fragments are within a factor of 1.5 in heavy atoms must be flagged for manual review (e.g. pyrvinium pamoate); duplicate structures are collapsed by connectivity.
+- **2026-11-01**: Step 6 decisions (Cutoffs and duplicate collapse):
+  - Tautomer choice: Canonical tautomer `parent_smiles_taut` adopted as the standard canonical parent SMILES.
+  - Molecular weight cutoff: 1000 Da cutoff applied mechanically; 55 heavy parents (> 1000 Da) removed and recorded in `review6_heavy_dropped.csv`.
+  - Conflict duplicate group: `Amphetamine sulfate` (label = 1) and `Dextroamphetamine sulfate` (label = 0) share connectivity key `KWTSXDURSIMDCE`; retained both rows with their own labels as separate entries in train/test splits.
+  - Mixed labeled/ambiguous duplicate groups (6 groups): retained both rows unchanged without relabeling or dropping.
+  - Same-label duplicate groups (18 groups): collapsed each group into one representative row, recording all member drug names in `collapsed_from`; removed non-representatives saved to `review6_collapsed.csv`.
+  - Small parents (Calcium acetate, Guanidine hydrochloride): retained in-scope.
+  - Final dataset size in `parents_final.csv`: exactly 1,094 rows (787 labeled: 511 positive, 276 negative; 307 ambiguous; positive rate 64.9%).

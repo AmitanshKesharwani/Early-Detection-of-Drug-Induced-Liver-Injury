@@ -159,6 +159,7 @@ def test_biologics_excluded(resolved_df):
         "Sodium bicarbonate",
         "Lanthanum carbonate",
         "Perflutren",
+        "Tetrabamate",
     ]
     for name in excluded_targets:
         match = resolved_df[resolved_df["drug_name"] == name]
